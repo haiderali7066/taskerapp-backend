@@ -8,7 +8,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 // frontend
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://fullstack-tasker-app.vercel.app",
   credentials: true,
 }));
 
