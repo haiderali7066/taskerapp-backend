@@ -8,20 +8,10 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 // frontend
 app.use(cors({
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      "https://fullstack-tasker-app.vercel.app",
-      "http://localhost:5173"
-    ];
-
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: ["https://fullstack-tasker-app.vercel.app", "http://localhost:5173"],
   credentials: true
 }));
+
 
 
 
